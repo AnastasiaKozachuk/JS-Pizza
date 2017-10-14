@@ -1,8 +1,8 @@
 @mainColor: #EA862E;
 @backgroundColor:#fffff5;
 @widthOfRightColumn: 350px;
-@topPanelHight :90px;
-@bottomPanelHight :150px;
+@topPanelHeight:90px;
+@bottomPanelHeight:150px;
 
 @import "pizza/pizza-card";
 @import "right-panel";
@@ -13,7 +13,7 @@ body{
 }
 .main-pizza{
   margin-right: @widthOfRightColumn;
-  margin-top:@topPanelHight*1.2;
+  margin-top: @topPanelHeight*1.2;
   position:relative;
 }
 
@@ -25,8 +25,8 @@ body{
 
 .top-line{
   white-space: nowrap;
-  margin-top:@topPanelHight*1.2;
-  margin-bottom:@topPanelHight*0.1;
+  margin-top: @topPanelHeight*1.2;
+  margin-bottom: @topPanelHeight*0.1;
   text-align: center;
   font-size:32px;
 
@@ -43,7 +43,7 @@ body{
 }
 
 .menu{
-  margin-bottom:@topPanelHight*0.3;
+  margin-bottom: @topPanelHeight*0.3;
   text-align: center;
 }
 
@@ -119,11 +119,11 @@ body{
 }
 
 .footer{
-  height:@bottomPanelHight;
+  height: @bottomPanelHeight;
   width: 100%;
   background-color: #ffffff;
   border-top: solid 1px #e4e4e4;
-  padding-top:@bottomPanelHight*0.3 ;
+  padding-top: @bottomPanelHeight*0.3 ;
  text-align: center;
   line-height: 30px;
   font-size: 14px;
