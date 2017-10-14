@@ -1,0 +1,218 @@
+@topPartHight :@topPanelHight;
+@bottomPartHight :120px;
+
+.right-panel{
+  height:100%;
+  width: @widthOfRightColumn;
+  position: fixed;
+  top:0;
+  right:0;
+  background-color:#f5f5f5;
+  box-shadow: rgba(0,0,0,.2) -3px 3px 10px;;
+}
+
+.main-part{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: @topPartHight;
+  padding-bottom: @topPanelHight+15px;
+  box-sizing: border-box;
+
+  .element{
+    position: relative;
+    border-bottom: solid 1px #e4e4e4;
+    padding: 15px 0px 10px 20px;
+    .partOfImg{
+      width:100px;
+      height: 100px;
+      position: absolute;
+      top:10px;
+      right:-50px;
+
+    }
+    .result-name{
+      color: @mainColor;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .littleImg{
+      width:15px;
+      height:15px;
+    }
+    .size{
+      margin-right: 15px;
+      float: left;
+    }
+    .infoAboutOrder{
+      margin-bottom: 10px;
+    }
+    .glyphicon-minus{
+      outline: none;
+      padding: 3px;
+      width:30px;
+      height:30px;
+      margin-left: 25px;
+      margin-right: 10px;
+      background-color: #c83935;
+      border:none;
+      border-radius: 15px;
+      color:white;
+    }
+    .glyphicon-minus:hover{
+      background-color: rgb(193,46,42);
+    }
+    .glyphicon-minus:active{
+      background-color: rgb(171,40,36);
+    }
+    .glyphicon-plus{
+      outline: none;
+      padding: 8px;
+      width:30px;
+      height:30px;
+      margin-left: 10px;
+      margin-right: 20px;
+      background-color: #469d46;
+      border:none;
+      border-radius: 15px;
+      color:white;
+    }
+    .glyphicon-plus:hover{
+      background-color: rgb(65,150,65);
+    }
+    .glyphicon-plus:active{
+      background-color: rgb(57,132,57);
+    }
+
+    .glyphicon-remove{
+      box-sizing: border-box;
+      outline: none;
+      padding: 8px;
+      width:32px;
+      height:32px;
+      background: linear-gradient(to bottom,#fafafa,#e4e4e4);
+      border: solid 1px #d6d6d6;
+      border-radius: 15px;
+      color:#ec890e;
+    }
+    .glyphicon-remove:hover{
+      background: none;
+      background-color: rgb(224,224,224);
+    }
+    .glyphicon-remove:active{
+      background: none;
+      background-color: rgb(212,212,212);
+    }
+  }
+
+
+}
+
+.top-part{
+  position: absolute;
+  width:100%;
+  height:@topPartHight;
+  background-color: #ffffff;
+  right: 0;
+  top:0;
+  border-bottom: solid 1px #e4e4e4;
+
+  .order{
+    padding-top:@topPanelHight*0.4 ;
+    .left-part-order{
+      min-width: 210px;
+      margin-right: 0;
+      padding-left: 15px;
+      white-space: nowrap;
+    }
+    .name{
+      font-size: 20px;
+      color: #333333;
+      font-weight: bold;
+
+    }
+
+    .amount-right{
+      font-weight: bold;
+      border-radius: 10px;
+      font-size:12px;
+      padding:2px 8px 2px 8px;
+      min-width:10px;
+      background-color: @mainColor;
+      color:white;
+
+    }
+
+    .clear{
+      text-align: right;
+      padding-top: 8px;
+      padding-right: 25px;
+      a{
+        font-size: 12px;
+        color:#808080;
+        text-decoration: none;
+
+      }
+      a:hover{
+        color:#808080;
+      }
+
+    }
+
+  }
+
+}
+
+.bottom-part{
+  border-top: solid 1px #e4e4e4;
+  position: absolute;
+  width:100%;
+  height:@bottomPartHight;
+  background-color: #ffffff;
+  right: 0;
+  bottom:0;
+  text-align: center;
+  .sum{
+    font-weight: bold;
+    margin-bottom: 25px;
+    width: 100%;
+    height:@bottomPartHight*0.3;
+
+  }
+  .name-sum{
+    padding: 18px;
+    font-size: 15px;
+    float: left;
+  }
+  .sum-price{
+    padding: 15px;
+    font-size: 20px;
+    float:right;
+  }
+  a{
+    padding-top: 9px;
+    background-color: #ed9f31;
+    border-color: #ed9f31;
+    color:white;
+    font-size: 18px;
+    height: 45px;
+    width: @widthOfRightColumn*0.8;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  #active-order:hover{
+    color:white;
+    background-color: #ec8d23;
+    border-color: #ec8d23;
+  }
+  #active-order:active{
+    color:white;
+    background-color: #d58512;
+    border-color: #d58512;
+  }
+  #active-order:focus{
+    color:white;
+    background-color: #ec8d23;
+    border-color: #ec8d23;
+  }
+}

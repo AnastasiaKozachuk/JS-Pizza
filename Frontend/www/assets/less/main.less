@@ -1,3 +1,132 @@
-@mainColor: blue;
+@mainColor: #EA862E;
+@backgroundColor:#fffff5;
+@widthOfRightColumn: 350px;
+@topPanelHight :90px;
+@bottomPanelHight :150px;
 
 @import "pizza/pizza-card";
+@import "right-panel";
+@import "top-panel";
+
+body{
+  background-color: @backgroundColor;
+}
+.main-pizza{
+  margin-right: @widthOfRightColumn;
+  margin-top:@topPanelHight*1.2;
+  position:relative;
+}
+
+.inner-container{
+  max-width: 1150px;
+  margin:auto;
+  padding: 20px;
+}
+
+.top-line{
+  white-space: nowrap;
+  margin-top:@topPanelHight*1.2;
+  margin-bottom:@topPanelHight*0.1;
+  text-align: center;
+  font-size:32px;
+
+  .amount{
+    font-weight: bold;
+    border-radius: 10px;
+    font-size:14px;
+    padding:2px 8px 2px 8px;
+    min-width:10px;
+    background-color: @mainColor;
+    color:white;
+    vertical-align: middle;
+  }
+}
+
+.menu{
+  margin-bottom:@topPanelHight*0.3;
+  text-align: center;
+}
+
+#active{
+  background-color: @mainColor;
+  border-color: @mainColor;
+  color:white;
+  font-size: 16px;
+}
+#active:hover{
+  box-shadow: none;
+}
+
+.new-but{
+  font-size: 16px;
+  background-color: @backgroundColor;
+  border-color: @backgroundColor;
+  color:@mainColor;
+}
+
+.new-but:hover{
+  color:@mainColor;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+}
+
+.new-but:active{
+  box-shadow: none;
+  color:@mainColor;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+}
+
+.new-but:focus{
+  box-shadow: none;
+  color:@mainColor;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+}
+
+.sales{
+  position:fixed;
+  bottom:0px;
+  left:15px;
+  height:125px;
+  width:100px;
+  background-color: @mainColor;
+  color: white;
+
+  img{
+    width: 100%;
+    display: block;
+    position:absolute;
+    bottom:125px;
+    left:0;
+  }
+
+  .word1{
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    margin:10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-bottom: dotted 2px #d16301;
+  }
+
+  .word2{
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.footer{
+  height:@bottomPanelHight;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: solid 1px #e4e4e4;
+  padding-top:@bottomPanelHight*0.3 ;
+ text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color:#808080;
+}
+

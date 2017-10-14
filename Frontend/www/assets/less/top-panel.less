@@ -1,0 +1,105 @@
+@colorGrey:#b7b7b7;
+@marginLeftElement:130px;
+.top-panel {
+  padding-right: @widthOfRightColumn;
+  width: 100%;
+  min-width: 750px;
+  height: @topPanelHight;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+
+  .top {
+    box-sizing: border-box;
+    margin-left: @marginLeftElement;
+    margin-right: 25px;
+    height: @topPanelHight/2;
+    border-bottom: solid 1px @colorGrey;;
+  }
+
+  .bottom {
+    box-sizing: border-box;
+    margin-left: @marginLeftElement;
+    margin-right: 25px;
+    height: @topPanelHight/2;
+  }
+
+  span {
+    height: @topPanelHight/2;
+    display: inline-block;
+    color: @colorGrey;
+
+  }
+
+  .info1{
+    white-space: nowrap;
+    padding-right: 30px;
+    padding-top: 10px;
+    font-size:20px;
+  }
+  .info2{
+    padding-right: 30px;
+    padding-top: 15px;
+    font-size:13px;
+  }
+
+  .info3{
+    padding-top: 13px;
+    font-size:15px;
+    padding-right: 0px;
+  }
+
+  .info4{
+    display: inline-block;
+    padding-top: 10px;
+    font-size:17px;
+    color:white;
+  }
+
+  #entered {
+    outline: none;
+    float: right;
+    display: block;
+    margin-top: 6px;
+    color: white;
+    background-color: #ec9821;
+    border-color: #ec9821;
+    font-family:   Arial, sans-serif;
+  }
+  #entered:hover {
+    background-color: #eb8c13;
+    border-color: #eb8c13;
+  }
+
+  .tape{
+    position: absolute;
+    top:0;
+    left:15px;
+    height: @topPanelHight;
+    width:100px;
+    background-color: @mainColor;
+    border-color: @mainColor;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    img{
+      width:100%;
+      display: block;
+      position: absolute;
+      top:@topPanelHight;
+      left:0px;
+      transform: rotate(180deg);
+    }
+
+    .title1{
+      font-size:19px;
+    }
+    .title2{
+      font-size:25px;
+    }
+
+  }
+}

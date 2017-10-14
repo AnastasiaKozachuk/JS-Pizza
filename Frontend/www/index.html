@@ -2,8 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Pizza</title>
-
+    <title>Pizza KMA</title>
+    <link rel="shortcut icon" href="assets/images/home-icon.png" type="image/png">
     <!-- Bootsrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -16,55 +16,503 @@
 </head>
 <body>
 <div id="cart"></div>
-<div class="container">
+<div class="main-pizza">
+    <div class="top-line">
+        <span>Усі піци</span>
+        <span class="amount">8</span>
+    </div>
+
+    <div class="menu">
+        <a href="#" id="active" class="btn  ">Усі</a>
+        <a href="#" class="btn  new-but">М'ясні</a>
+        <a href="#" class="btn  new-but">З ананасами</a>
+        <a href="#" class="btn  new-but">З грибами</a>
+        <a href="#" class="btn  new-but">З морепродуктами</a>
+        <a href="#" class="btn  new-but">Вега</a>
+    </div>
+<div class="inner-container">
     <div class="row" id="pizza_list">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-6 col-lg-4 pizza-element">
+            <div class="thumbnail pizza-card">
+                <div class="label label-danger">Нова</div>
+                <img src="assets/images/pizza_7.jpg">
+
+                <div class="caption ">
+
+                    <h3>Імпреза</h3>
+                  <div class="type"> М’ясна піца</div>
+                    <div class="description">Балик, салямі, куриця, сир моцарелла, сир рокфорд, ананаси, томатна паста, петрушка</div>
+
+                <div class="row">
+                    <div class=" col-sm-6 card-column">
+                        <div class="block1">
+                            <div >
+                                <img src="assets/images/size-icon.svg">
+                                <span>30</span>
+                            </div>
+                            <div >
+                                <img src="assets/images/weight.svg">
+                                <span>370</span>
+                            </div>
+                        </div>
+
+                        <div class="block2">
+                            <div class="price">99</div>
+                            <div class="grivnas">грн.</div>
+                        </div>
+                        <a href="#" class="btn btn-default">Купити</a>
+                    </div>
+                    <div class=" col-sm-6 card-column">
+                        <div class="block1">
+                            <div >
+                                <img src="assets/images/size-icon.svg">
+                                <span>40</span>
+                            </div>
+                            <div >
+                                <img src="assets/images/weight.svg">
+                                <span>660</span>
+                            </div>
+                        </div>
+
+                        <div class="block2">
+                            <div class="price">169</div>
+                            <div class="grivnas">грн.</div>
+                        </div>
+                        <a href="#" class="btn btn-default">Купити</a>
+                    </div>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pizza-element">
+            <div class="thumbnail pizza-card">
+                <div class="label label-success">Популярна</div>
+                <img src="assets/images/pizza_2.jpg">
+
+                <div class="caption"><h3>BBQ</h3>
+                    <div class="type"> М’ясна піца</div>
+                    <div class="description">Мисливські ковбаски, ковбаски папероні, шинка, сир домашній, шампінйони, петрушка, оливки</div>
+
+                    <div class="row">
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>30</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>460</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">139</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>40</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>840</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">199</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 pizza-element">
             <div class="thumbnail pizza-card">
                 <img src="assets/images/pizza_1.jpg">
 
-                <div class="caption"><h3>Thumbnail label</h3>
+                <div class="caption"><h3>Міксовий поло</h3>
+                    <div class="type"> М’ясна піца</div>
+                    <div class="description">Вітчина, куриця копчена, сир моцарелла, ананаси, кукурудза, петрушка, соус томатний</div>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <div class="row">
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>30</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>430</span>
+                                </div>
+                            </div>
 
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 2</a>
-                        <a href="#" class="btn btn-default">Button 1</a>
-                    </p>
+                            <div class="block2">
+                                <div class="price">115</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>40</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>780</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">179</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-6 col-lg-4 pizza-element">
             <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_2.jpg">
+                <img src="assets/images/pizza_5.jpg">
 
-                <div class="caption"><h3>Thumbnail label</h3>
+                <div class="caption"><h3>Сициліано</h3>
+                    <div class="type"> М’ясна піца</div>
+                    <div class="description">Вітчина, салямі, сир моцарелла, шампінйони, перець болгарський, соус томатний</div>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <div class="row">
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>30</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>450</span>
+                                </div>
+                            </div>
 
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 3</a>
-                        <a href="#" class="btn btn-default">Button 4</a>
-                    </p>
+                            <div class="block2">
+                                <div class="price">111</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>40</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>790</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">169</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-6 col-lg-4 pizza-element">
             <div class="thumbnail pizza-card">
                 <img src="assets/images/pizza_3.jpg">
 
-                <div class="caption"><h3>Thumbnail label</h3>
+                <div class="caption"><h3>Маргарита</h3>
+                    <div class="type"> Вега піца</div>
+                    <div class="description">Сир моцарелла, сир домашній, помідори, базилік, оливкова олія, соус томатний</div>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <div class="row">
+                        <div class=" col-sm-12 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>30</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>370</span>
+                                </div>
+                            </div>
 
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 5</a>
-                        <a href="#" class="btn btn-default">Button 6</a>
-                    </p>
+                            <div class="block2">
+                                <div class="price">89</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-md-6 col-lg-4 pizza-element">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_6.jpg">
+
+                <div class="caption"><h3>Мікс смаків</h3>
+                    <div class="type"> М’ясна піца</div>
+                    <div class="description">Ковбаски, сир моцарелла, шампінйони, ананаси, цибуля кримська, огірки квашені, соус гірчичний</div>
+
+                    <div class="row">
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>30</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>470</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">115</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>40</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>780</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">180</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pizza-element">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_8.jpg">
+
+                <div class="caption"><h3>Дольче Маре</h3>
+                    <div class="type">Морська піца</div>
+                    <div class="description">Криветки тигрові, мідії, ікра червона, філе червоної риби, сир моцарелла, оливкова олія, вершки</div>
+
+                    <div class="row">
+                        <div class=" col-sm-12 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>40</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>845</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">399</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 pizza-element">
+            <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_4.jpg">
+
+                <div class="caption"><h3>Россо Густо</h3>
+                    <div class="type"> Морська піца</div>
+                    <div class="description">Ікра червона, лосось копчений, сир моцарелла, оливкова олія, вершки</div>
+
+
+                    <div class="row">
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>30</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>400</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">189</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                        <div class=" col-sm-6 card-column">
+                            <div class="block1">
+                                <div >
+                                    <img src="assets/images/size-icon.svg">
+                                    <span>40</span>
+                                </div>
+                                <div >
+                                    <img src="assets/images/weight.svg">
+                                    <span>700</span>
+                                </div>
+                            </div>
+
+                            <div class="block2">
+                                <div class="price">299</div>
+                                <div class="grivnas">грн.</div>
+                            </div>
+                            <a href="#" class="btn btn-default">Купити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <div class="footer">
+        <div>Pizza.22 - практичний проект в межах курсу JavaScript в Києво-Могилянській Академії</div>
+        <div>Доставка піци не здійснюється</div>
+    </div>
+    <div class="sales">
+        <img src="assets/images/discount.svg">
+        <div class="word1">ЦЬОГО ТИЖНЯ НА ВСЕ</div>
+        <div class="word2">-20%</div>
+    </div>
+</div>
+
+<div class="top-panel">
+    <a href="#" >
+        <div class="tape">
+        <div class="title1">PIZZA</div>
+        <div class="title2">KMA</div>
+        <img src="assets/images/discount.svg">
+    </div>
+    </a>
+    <div class="top">
+        <span class="info1 ">(044) 222 5 222</span>
+        <span class="info2 hidden-xs hidden-sm">24 години/ 7 днів на тиждень</span>
+        <span class="info3 hidden-sm hidden-xs hidden-md">Безкоштовна доставка піци</span>
+        <button type="button" class="btn btn-default " id="entered">Ввійти</button>
+    </div>
+    <div class="bottom">
+        <a href="#" class="info4 hidden-xs" >Піца</a>
+    </div>
+</div>
+
+<div class="right-panel">
+    <div class="top-part">
+        <div class="row order">
+            <div class="col-xs-6 " >
+                <div class="left-part-order">
+                    <span class="name">Замовлення</span>
+                    <span class="amount-right">2</span>
+                </div>
+            </div>
+            <div class="col-xs-6 clear">
+                <a href="#" > <span >Очистити замовлення</span> </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-part">
+        <div class="row">
+            <div class="col-xs-12 ">
+                <div class="element">
+                    <div class="result-name">
+                    Дольче Маре (Велика)
+                    </div>
+                    <div class="infoAboutOrder">
+                        <div class="size">
+                            <img class = "littleImg" src="assets/images/size-icon.svg">
+                            <span>40</span>
+                        </div>
+                        <div>
+                            <img class = "littleImg" src="assets/images/weight.svg">
+                            <span>845</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span style="font-weight: bold; font-size: 16px;">399</span>
+                        <span style="font-weight: bold; font-size: 16px;">грн.</span>
+                        <button type="button" class="glyphicon glyphicon-minus"></button>
+                        <span style="font-weight: bold; font-size: 16px;">1</span>
+                        <button type="button" class="glyphicon glyphicon-plus"></button>
+                        <button type="button" class="glyphicon glyphicon-remove"></button>
+                    </div>
+                    <img src="assets/images/cutPizza_8.png" class="partOfImg">
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 ">
+                <div class="element">
+                    <div class="result-name">
+                        BBQ (Велика)
+                    </div>
+                    <div class="infoAboutOrder">
+                        <div class="size">
+                            <img class = "littleImg" src="assets/images/size-icon.svg">
+                            <span>40</span>
+                        </div>
+                        <div>
+                            <img class = "littleImg" src="assets/images/weight.svg">
+                            <span>840</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span style="font-weight: bold; font-size: 16px;">199</span>
+                        <span style="font-weight: bold; font-size: 16px;">грн.</span>
+                        <button type="button" class="glyphicon glyphicon-minus"></button>
+                        <span style="font-weight: bold; font-size: 16px;">1</span>
+                        <button type="button" class="glyphicon glyphicon-plus"></button>
+                        <button type="button" class="glyphicon glyphicon-remove"></button>
+                    </div>
+                    <img src="assets/images/cutPizza_2.png" class="partOfImg">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="bottom-part">
+        <div class="sum">
+            <div class="name-sum">Сума замовлення</div>
+            <div class="sum-price">
+                <span>598 </span>
+                <span>грн.</span></div>
+        </div>
+        <a href="#" id="active-order" class="btn  btn-default">Замовити</a>
     </div>
 </div>
 
