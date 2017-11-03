@@ -1,11 +1,10 @@
-/**
- * Created by diana on 12.01.16.
- */
+
 
 var pizza_info = [
     {
         id:1,
         icon:'assets/images/pizza_7.jpg',
+        half_icon:'assets/images/cutPizza_7.png',
         title: "Імпреза",
         type: 'М’ясна піца',
         content: {
@@ -26,12 +25,13 @@ var pizza_info = [
             price: 169
         },
         is_new:true,
-        is_popular:true
+        is_popular:false
 
     },
     {
         id:2,
         icon:'assets/images/pizza_2.jpg',
+        half_icon:'assets/images/cutPizza_2.png',
         title: "BBQ",
         type: 'М’ясна піца',
         content: {
@@ -55,6 +55,7 @@ var pizza_info = [
     {
         id:3,
         icon:'assets/images/pizza_1.jpg',
+        half_icon:'assets/images/cutPizza_1.png',
         title: "Міксовий поло",
         type: 'М’ясна піца',
         content: {
@@ -77,6 +78,7 @@ var pizza_info = [
     {
         id:4,
         icon:'assets/images/pizza_5.jpg',
+        half_icon:'assets/images/cutPizza_5.png',
         title: "Сициліано",
         type: 'М’ясна піца',
         content: {
@@ -97,8 +99,9 @@ var pizza_info = [
         }
     },
     {
-        id:17,
+        id:5,
         icon:'assets/images/pizza_3.jpg',
+        half_icon:'assets/images/cutPizza_3.png',
         title: "Маргарита",
         type: 'Вега піца',
         content: {
@@ -110,11 +113,12 @@ var pizza_info = [
             weight: 370,
             size: 30,
             price: 89
-        }
+        },
     },
     {
-        id:43,
+        id:6,
         icon:'assets/images/pizza_6.jpg',
+        half_icon:'assets/images/cutPizza_6.png',
         title: "Мікс смаків",
         type: 'М’ясна піца',
         content: {
@@ -136,8 +140,9 @@ var pizza_info = [
         }
     },
     {
-        id:90,
+        id:7,
         icon:'assets/images/pizza_8.jpg',
+        half_icon:'assets/images/cutPizza_8.png',
         title: "Дольче Маре",
         type: 'Морська піца',
         content: {
@@ -154,6 +159,7 @@ var pizza_info = [
     {
         id:6,
         icon:'assets/images/pizza_4.jpg',
+        half_icon:'assets/images/cutPizza_4.png',
         title: "Россо Густо",
         type: 'Морська піца',
         content: {

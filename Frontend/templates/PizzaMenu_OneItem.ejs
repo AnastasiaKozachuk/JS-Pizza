@@ -17,9 +17,10 @@ function getIngredientsArray(pizza) {
 }
 
    %>
-<div class="col-md-6 col-lg-4 pizza-card">
-    <div class="thumbnail">
-        <img class="pizza-icon" src="<%= pizza.icon %>" alt="Pizza">
+
+
+<div class="col-md-6 col-lg-4 pizza-element">
+    <div class="thumbnail pizza-card">
 
         <% if(pizza.is_new) { %>
         <span class="label label-danger">Нова</span>
@@ -27,15 +28,106 @@ function getIngredientsArray(pizza) {
         <span class="label label-success">Популярна</span>
         <% } %>
 
-        <div class="caption">
-            <span class="title"><%= pizza.title %></span>
-            <div class="type"><%= pizza.type %></div>
-            <div class="description">
-                <%= getIngredientsArray(pizza).join(", ") %>
-            </div>
-        </div>
+        <img src="<%= pizza.icon %>">
 
-        <!-- Перед тим щоб показати кнопку необхідно переконатися, що піца має великий розмір -->
-        <button class="btn btn-primary buy-big">Купити велику</button>
+        <div class="caption ">
+
+            <h3><%= pizza.title %></h3>
+            <div class="type"><%= pizza.type %></div>
+            <div class="description"> <%= getIngredientsArray(pizza).join(", ") %></div>
+
+
+            <%  if ((typeof pizza['small_size'] !== "undefined")&&(typeof pizza['big_size'] !== "undefined")) {%>
+            <div class="row">
+
+                <div class=" col-sm-6 card-column">
+
+                    <div class="block1">
+                        <div >
+                            <img src="assets/images/size-icon.svg">
+                            <span><%= pizza['small_size'].size %></span>
+                        </div>
+                        <div >
+                            <img src="assets/images/weight.svg">
+                            <span><%= pizza['small_size'].weight %></span>
+                        </div>
+                    </div>
+
+                    <div class="block2">
+                        <div class="price"><%= pizza['small_size'].price %></div>
+                        <div class="grivnas">грн.</div>
+                    </div>
+                    <button type="button" class="btn btn-default buy-small">Купити</button>
+
+                </div>
+
+
+                <div class=" col-sm-6 card-column">
+                    <div class="block1">
+                        <div >
+                            <img src="assets/images/size-icon.svg">
+                            <span><%= pizza['big_size'].size %></span>
+                        </div>
+                        <div >
+                            <img src="assets/images/weight.svg">
+                            <span><%= pizza['big_size'].weight %></span>
+                        </div>
+                    </div>
+
+                    <div class="block2">
+                        <div class="price"><%= pizza['big_size'].price %></div>
+                        <div class="grivnas">грн.</div>
+                    </div>
+                    <button type="button" class="btn btn-default buy-big">Купити</button>
+                </div>
+            </div>
+            <%  }else if ((typeof pizza['small_size'] === "undefined")&&(typeof pizza['big_size'] !== "undefined")){%>
+            <div class="row">
+                <div class=" col-sm-12 card-column">
+                    <div class="block1">
+                        <div >
+                            <img src="assets/images/size-icon.svg">
+                            <span><%= pizza['big_size'].size %></span>
+                        </div>
+                        <div >
+                            <img src="assets/images/weight.svg">
+                            <span><%= pizza['big_size'].weight %></span>
+                        </div>
+                    </div>
+
+                    <div class="block2">
+                        <div class="price"><%= pizza['big_size'].price %></div>
+                        <div class="grivnas">грн.</div>
+                    </div>
+                    <button type="button" class="btn btn-default buy-big">Купити</button>
+                </div>
+            </div>
+            <%  }else if ((typeof pizza['small_size'] !== "undefined")&&(typeof pizza['big_size'] === "undefined")){%>
+            <div class="row">
+                <div class=" col-sm-12 card-column">
+                    <div class="block1">
+                        <div >
+                            <img src="assets/images/size-icon.svg">
+                            <span><%= pizza['small_size'].size %></span>
+                        </div>
+                        <div >
+                            <img src="assets/images/weight.svg">
+                            <span><%= pizza['small_size'].weight %></span>
+                        </div>
+                    </div>
+
+                    <div class="block2">
+                        <div class="price"><%= pizza['small_size'].price %></div>
+                        <div class="grivnas">грн.</div>
+                    </div>
+                    <button type="button" class="btn btn-default buy-small">Купити</button>
+                </div>
+            </div>
+            <% }%>
+
+
+
+
+        </div>
     </div>
 </div>
