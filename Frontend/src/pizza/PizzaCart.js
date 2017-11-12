@@ -1,6 +1,6 @@
-var Pizza_List = require('../Pizza_List');
 var Templates = require('../Templates');
 var Storage = require('./Storage');
+var API = require('../API');
 //Перелік розмірів піци
 var PizzaSize = {
     Big: "big_size",
@@ -14,17 +14,19 @@ var Cart = [];
 var $cart = $("#cart");
 
 
-function addToCart(pizza, size) {
 
+function addToCart(pizza, size) {
     var exist = false;
+
     Cart.forEach(function (obj) {
-        if(obj.pizza==pizza&&obj.size==size){
+        if(obj.pizza.id==pizza.id&&obj.size==size){
             exist = true;
             obj.quantity += 1;
         }
     });
 
-    if(!exist) {
+    if(!exist){
+        console.log(Cart);
         Cart.push({
             pizza: pizza,
             size: size,
@@ -72,6 +74,7 @@ function someNote(){
         $( "#bottom-id").addClass('bottom-part-sec-vers');
     }else {
         $("#active-order").prop("disabled", false);
+        $("#back_to_main_page").prop("disabled", false);
         $("#bottom-id").removeClass('bottom-part-sec-vers');
 
     }
@@ -85,6 +88,17 @@ function show_price(){
     $(".all-price").text(sum_price);
 }
 
+
+$("#active-order").click(function(){
+    document.location.href = "http://localhost:5050/order.html";
+
+});
+
+$("#back_to_main_page").click(function(){
+    document.location.href = "http://localhost:5050";
+    updateCart();
+});
+
 function updateCart() {
 
     Storage.write("cart",Cart);
@@ -94,7 +108,12 @@ function updateCart() {
     someNote();
 
     function showOnePizzaInCart(cart_item,numb) {
-        var html_code = Templates.PizzaCart_OneItem(cart_item);
+        if(document.location.href=="http://localhost:5050/"){
+            var html_code = Templates.PizzaCart_OneItem(cart_item);
+        }else if(document.location.href=="http://localhost:5050/order.html"){
+            var html_code = Templates.PizzaCart_OneOrderedItem(cart_item);
+        }
+
 
         var $node = $(html_code);
 
@@ -134,10 +153,24 @@ function updateCart() {
 
 }
 
+function createOrder(callback) {
+    var name=$("#inputName").val();
+    var telephone=$("#inputTelephone").val();
+    API.createOrder({
+        name:name ,
+        phone: telephone,
+        order:Cart
+    }, function (err,result) {
+        if(err){
+            return callback(err);
+        }
+        callback(null,result);
+    });
+};
 
 exports.addToCart = addToCart;
 
 exports.getPizzaInCart = getPizzaInCart;
 exports.initialiseCart = initialiseCart;
-
+exports.createOrder = createOrder;
 exports.PizzaSize = PizzaSize;

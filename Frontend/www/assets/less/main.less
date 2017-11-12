@@ -132,9 +132,65 @@ body{
   background-color: #ffffff;
   border-top: solid 1px #e4e4e4;
   padding-top: @bottomPanelHeight*0.3 ;
+  padding-right: @widthOfRightColumn;
  text-align: center;
   line-height: 30px;
   font-size: 14px;
   color:#808080;
+}
+
+.bs-callout {
+  padding: 20px;
+
+  background-color: white;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
+.form-control{
+  height: 43px;
+  font-size: 16px;
+}
+
+.control-label{
+  font-size: 18px;
+}
+
+.next{
+  margin-top: 20px;
+  display: block;
+  float: right;
+  margin-right: 15px;
+  background: linear-gradient(to bottom, #eda737, #ea8d27);
+  border-color: #ed8821;
+  color:white;
+  outline:none;
+  width: 110px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.next:hover{
+  color:white;
+  background-color: #ec8d23;
+  border-color: #ec8d23;
+  outline:none;
+}
+.next:active{
+  color:white;
+  background-color: #d58512;
+  border-color: #d58512;
+  outline:none!important;
+}
+.next:focus{
+  color:white;
+  background-color: #ec8d23;
+  border-color: #ec8d23;
+  outline:none!important;
 }
 

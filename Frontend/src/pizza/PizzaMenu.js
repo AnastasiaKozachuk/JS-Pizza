@@ -1,7 +1,7 @@
-
+var API = require('../API');
 var Templates = require('../Templates');
 var PizzaCart = require('./PizzaCart');
-var Pizza_List = require('../Pizza_List');
+var Pizza_List = {};
 
 //HTML едемент куди будуть додаватися піци
 var $pizza_list = $("#pizza_list");
@@ -141,10 +141,34 @@ $("#vega").click(function(){
     $("#name-top-line").text("Вегетаріанські піци");
     filterPizza('Вега піца');
 });
+
+$("#next_step_order").click(function () {
+    if(!($("#forAddr").hasClass("has-error")||$("#forName").hasClass("has-error")||$("#forTeleph").hasClass("has-error")))
+        PizzaCart.createOrder(function (err, data) {
+            if(err){
+                alert("Can't create order.");
+            }else{
+                alert("Order success! \n"+"Quantity of pizza ordered: "+JSON.stringify(data.pizzas)+"\nOrder price: "+JSON.stringify(data.priceOrder)+" grn.");
+            }
+        });
+    });
+
+
+
 function initialiseMenu() {
-    //Показуємо усі піци
-    showPizzaList(Pizza_List)
+   
+    API.getPizzaList(function (err,list) {
+        if(err){
+            alert("Can't load pizzas");
+        }else{
+            Pizza_List = list;
+            showPizzaList(Pizza_List);
+        }
+    });
+
 }
+
+
 
 exports.filterPizza = filterPizza;
 exports.initialiseMenu = initialiseMenu;

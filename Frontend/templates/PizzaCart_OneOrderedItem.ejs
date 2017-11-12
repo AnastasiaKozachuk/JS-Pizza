@@ -17,10 +17,15 @@
             </div>
             <div>
                 <span style="font-weight: bold; font-size: 16px;"><%= pizza[size].price*quantity %> грн.</span>
-                   <button type="button" class="glyphicon glyphicon-minus minus"></button>
-                   <span style="font-weight: bold; font-size: 16px;"><%= quantity %></span>
-                   <button type="button" class="glyphicon glyphicon-plus  plus"></button>
-                   <button type="button" class="glyphicon glyphicon-remove remove"></button>
+
+                    <span style="font-weight: bold; font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;<%= quantity %>
+                        <% if(quantity%10==1&&quantity!=11) { %>
+                        піца
+                        <% } else if(quantity%10>1&&quantity%10<5&&(quantity!=12||quantity!=13||quantity!=14)) {%>
+                        піци
+                        <% }else { %>
+                        піц
+                        <% } %></span>
 
             </div>
             <img src="<%= pizza.half_icon %>" class="partOfImg">

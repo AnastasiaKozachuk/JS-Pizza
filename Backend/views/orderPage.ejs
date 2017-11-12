@@ -1,0 +1,49 @@
+<% include common/header.ejs %>
+
+
+<div class="row" style="max-width:1500px;  padding-left: 30px; padding-right: 380px; margin:150px auto; ">
+    <div id="dataOfUser" style="font-size: 23px;  padding: 25px;" >
+        1. Контактні дані
+    </div>
+    <div class="col-lg-7" style="min-width: 325px">
+<form class="form-horizontal">
+
+    <div class="form-group" id="forName">
+        <label for="inputName" class="col-md-2 control-label">Ім'я</label>
+        <div class="col-md-10">
+            <input type="email" class="form-control" id="inputName" placeholder="Прізвище Ім'я" onkeyup=" checkName()" >
+            <div class="help-block" id="help1" style="font-size: 16px; display: none;">Введіть власне ім’я (повино містити лише букви)</div>
+        </div>
+    </div>
+    <div class="form-group" id="forTeleph">
+        <label for="inputTelephone" class="col-md-2 control-label">Телефон</label>
+        <div class="col-md-10">
+            <input type="email" class="form-control" id="inputTelephone" placeholder="+38050432222"  onkeyup=" checkTeleph()" >
+            <div class="help-block" id="help2" style="font-size: 16px; display: none;">Введіть номер телефону у форматі +380 або почніть з 0</div>
+        </div>
+    </div>
+
+    <div class="form-group" id="forAddr">
+        <label for="inputAddress" class="col-md-2 control-label">Адреса</label>
+        <div class="col-md-10">
+            <input type="email" class="form-control" id="inputAddress" placeholder="Київ, вул.Спаська, 2"  onkeyup=" checkAddr()" >
+            <div class="help-block" id="help3" style="font-size: 16px; display: none;">Поле не має бути пустим</div>
+        </div>
+    </div>
+</form>
+
+
+</div>
+    <div class="col-lg-5" style="min-width: 325px">
+        <div class="bs-callout bs-callout-warning">
+            <h4 style="font-size: 20px; padding-bottom: 10px;">Інформація про замовлення</h4>
+            <p style="font-size: 17px;"><span style="font-weight: bold; "> Приблизний час доставки: </span>невідомий</p>
+            <p style="font-size: 17px;"><span style="font-weight: bold"> Адреса доставки:</span> невідома</p>
+        </div>
+    </div>
+    <button type="button" onclick="checkName();checkTeleph();checkAddr();" class="btn next" id="next_step_order">Далі <span class="glyphicon glyphicon-chevron-right " style="font-weight: bold"></span></button>
+
+</div>
+
+<% include common/rightPanelForOrder.ejs %>
+<% include common/footer.ejs %>
