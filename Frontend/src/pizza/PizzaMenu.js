@@ -148,7 +148,20 @@ $("#next_step_order").click(function () {
             if(err){
                 alert("Can't create order.");
             }else{
-                alert("Order success! \n"+"Quantity of pizza ordered: "+JSON.stringify(data.pizzas)+"\nOrder price: "+JSON.stringify(data.priceOrder)+" grn.");
+                LiqPayCheckout.init({
+                    data:	data.data,
+                    signature:	data.signature,
+                    embedTo:	"#liqpay",
+                    mode:	"popup"	//	embed	||	popup
+                }).on("liqpay.callback",	function(data){
+
+                }).on("liqpay.ready",	function(data){
+
+                }).on("liqpay.close",	function(data){
+
+                });
+
+
             }
         });
     });
@@ -156,7 +169,7 @@ $("#next_step_order").click(function () {
 
 
 function initialiseMenu() {
-   
+
     API.getPizzaList(function (err,list) {
         if(err){
             alert("Can't load pizzas");
@@ -167,7 +180,6 @@ function initialiseMenu() {
     });
 
 }
-
 
 
 exports.filterPizza = filterPizza;

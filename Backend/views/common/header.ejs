@@ -46,7 +46,8 @@
         };
 
        function checkAddr(){
-           if(document.getElementById("inputAddress").value.trim()!=""){
+           var reg=/^([A-Za-zа-яА-Яыі]+.*)$/;
+           if(String(document.getElementById("inputAddress").value).search(reg)!=-1){
                document.getElementById("forAddr").classList.remove("has-error");
                document.getElementById("forAddr").classList.add("has-success");
                document.getElementById("help3").style.display="none";

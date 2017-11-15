@@ -2,6 +2,9 @@ var Templates = require('../Templates');
 var Storage = require('./Storage');
 var API = require('../API');
 //Перелік розмірів піци
+
+var main_page ="http://localhost:5050" ;
+var order_page = "http://localhost:5050/order.html";
 var PizzaSize = {
     Big: "big_size",
     Small: "small_size"
@@ -88,14 +91,24 @@ function show_price(){
     $(".all-price").text(sum_price);
 }
 
-
 $("#active-order").click(function(){
-    document.location.href = "http://localhost:5050/order.html";
+    document.location.href = order_page;
+});
 
+
+
+$(".tape").click(function(){
+    document.location.href = main_page;
+    updateCart();
+});
+
+$(".info4").click(function(){
+    document.location.href = main_page;
+    updateCart();
 });
 
 $("#back_to_main_page").click(function(){
-    document.location.href = "http://localhost:5050";
+    document.location.href = main_page;
     updateCart();
 });
 
@@ -156,9 +169,11 @@ function updateCart() {
 function createOrder(callback) {
     var name=$("#inputName").val();
     var telephone=$("#inputTelephone").val();
+    var address=$("#inputAddress").val();
     API.createOrder({
         name:name ,
         phone: telephone,
+        address: address,
         order:Cart
     }, function (err,result) {
         if(err){
@@ -174,3 +189,5 @@ exports.getPizzaInCart = getPizzaInCart;
 exports.initialiseCart = initialiseCart;
 exports.createOrder = createOrder;
 exports.PizzaSize = PizzaSize;
+exports.main_page = main_page;
+exports.order_page = order_page;
