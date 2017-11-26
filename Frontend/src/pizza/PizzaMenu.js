@@ -145,6 +145,7 @@ $("#vega").click(function(){
 $("#next_step_order").click(function () {
     if(!($("#forAddr").hasClass("has-error")||$("#forName").hasClass("has-error")||$("#forTeleph").hasClass("has-error")))
         PizzaCart.createOrder(function (err, data) {
+            var result ;
             if(err){
                 alert("Can't create order.");
             }else{
@@ -155,10 +156,16 @@ $("#next_step_order").click(function () {
                     mode:	"popup"	//	embed	||	popup
                 }).on("liqpay.callback",	function(data){
 
+                    result = data.result;
+
                 }).on("liqpay.ready",	function(data){
 
                 }).on("liqpay.close",	function(data){
-
+                    if(result=="success"){
+                        alert("Success!");
+                    }else{
+                        alert("Failure!");
+                    }
                 });
 
 
